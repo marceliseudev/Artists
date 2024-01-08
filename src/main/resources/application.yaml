@@ -37,3 +37,9 @@ app:
          permissionsScopeName: scope
          jwksUrl: https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com
          #jwksResource: googleservicepublickey.json
+  backends:
+    artistsApi:
+      baseUrl: https://europe-west1-madesimplegroup-151616.cloudfunctions.net
+      connectTimeout: 10000
+      connectionRequestTimeout: 10000
+      authorization: "ZGV2ZWxvcGVyOlpHVjJaV3h2Y0dWeQ=="
