@@ -25,6 +25,27 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
+      <plugin>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>2.7.1</version>
+          <configuration>
+		    <from>                           
+       		   <image>openjdk:12-alpine</image>	
+		    </from>          
+            <to>
+               <image>gcr.io/single-inquiry-410315/artists-api</image>
+            </to>
+            <container>
+               <jvmFlags>
+                   <jvmFlag>-Duser.timezone=GMT-3</jvmFlag>
+                   <jvmFlag>-Djdk.tls.client.protocols=TLSv1.2</jvmFlag>
+                   <jvmFlag>-Duser.language=pt</jvmFlag>
+                   <jvmFlag>-Duser.region=BR</jvmFlag>
+               </jvmFlags>
+             </container>            
+          </configuration>
+      </plugin>
     </plugins>
   </build>
 
@@ -39,6 +60,54 @@
       <groupId>com.fasterxml.jackson.datatype</groupId>
       <artifactId>jackson-datatype-jsr310</artifactId>
     </dependency>
+
+    <!-- MongoDB -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-mongodb</artifactId>
+    </dependency>
+
+    <!-- Spring Security -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-resource-server</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-jose</artifactId>
+    </dependency>
+
+      <!-- Spring actuator -->
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-actuator</artifactId>
+      </dependency>
+	
+	<!-- Unirest from Kong -->
+      <dependency>
+          <groupId>com.konghq</groupId>
+          <artifactId>unirest-java</artifactId>
+          <version>3.13.11</version>
+      </dependency>
+
+      <!-- firebase-admin -->
+      <dependency>
+          <groupId>com.google.firebase</groupId>
+          <artifactId>firebase-admin</artifactId>
+          <version>9.2.0</version>
+      </dependency>
+
+      <!-- lombok -->
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>1.18.24</version>
+          <scope>provided</scope>
+      </dependency>
 
     <!-- Test -->
     <dependency>

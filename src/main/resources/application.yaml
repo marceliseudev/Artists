@@ -1,6 +1,9 @@
 spring:
   application:
     name: artists-api
+  data:
+    mongodb:
+      uri: mongodb+srv://testuser:artists2024@cluster0.zs8ogjw.mongodb.net/test
 
 debug: false
 logging.level.com.marceliseu: DEBUG
@@ -18,3 +21,19 @@ server:
   ssl:
     enabled: false
 
+cors:
+  allowedOrigins:
+    - https://artists-demo.web.app
+    - http://localhost:8080
+    - http://192.168.0.21:8080
+
+app:
+  jwt:
+    authenticatedOnly: true
+    issuers:
+      google-service:
+         issuer: https://securetoken.google.com/projectartists-b5ef8
+         audience: "projectartists-b5ef8"
+         permissionsScopeName: scope
+         jwksUrl: https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com
+         #jwksResource: googleservicepublickey.json
