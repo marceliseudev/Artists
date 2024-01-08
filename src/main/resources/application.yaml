@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: artists-api
+
+debug: false
+logging.level.com.marceliseu: DEBUG
+logging.level.org.springframework.data.mongodb: ERROR
+log4j.category.org.springframework.data.mongodb: ERROR
+
+server:
+  servlet:
+     context-path: /artists-api/v1.0
+  error:
+    include-message: always
+    include-exception: false
+    include-stacktrace: always
+  port: 8090
+  ssl:
+    enabled: false
+
