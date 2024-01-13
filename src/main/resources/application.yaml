@@ -3,7 +3,7 @@ spring:
     name: artists-api
   data:
     mongodb:
-      uri: mongodb+srv://testuser:artists2024@cluster0.zs8ogjw.mongodb.net/test
+      uri: mongodb+srv://xxx:wwww@cluster0.zzzzz.mongodb.net/test
 
 debug: false
 logging.level.com.marceliseu: DEBUG
