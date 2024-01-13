@@ -3,8 +3,7 @@ spring:
     name: artists-api
   data:
     mongodb:
-      uri: mongodb+srv://xxx:wwww@cluster0.zzzzz.mongodb.net/test
-
+      uri: 
 debug: false
 logging.level.com.marceliseu: DEBUG
 logging.level.org.springframework.data.mongodb: ERROR
